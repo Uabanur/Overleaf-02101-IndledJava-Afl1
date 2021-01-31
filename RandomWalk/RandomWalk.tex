@@ -1,0 +1,16 @@
+\section*{1.2a RandomWalk}
+
+
+
+    \texttt{Randomwalk} is a program which simulates a randomly walking particle in a grid, using the method \texttt{runSimulation}. We implemented the program as asked. Calling the \texttt{runSimulation} method requires the following parameters:
+    \begin{itemize}
+        \item $n$: The size of the grid in which the particle moves.
+        \item $s$: Maximum stride length / move length for the particle.
+        \item $t$: Number of times the particle moves.
+    \end{itemize}
+
+    To simulate this, the particle is placed at a random $(x,y)$ coordinate within the grid. \texttt{t} times, the particle moves in a randomly chosen direction, with a step length in the interval $[0,s]$ (inclusive), i.e. it is possible for the particle to move 0 or $s$ steps. \\
+    \\
+    If the randomly chosen direction and step length results in the particle moving outside the grid, that move is skipped, but the iteration counter is still incremented, i.e. the particle is kept in the same position until the next iteration.\\
+    \\
+    Random numbers are generated using the \texttt{Random} class, and the program is organized mostly in methods within the \texttt{RandomWalk} class.

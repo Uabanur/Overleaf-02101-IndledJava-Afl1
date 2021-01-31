@@ -1,0 +1,20 @@
+\section*{1.1 NumberCheck}
+
+We implemented the program as asked, with the exact specified names for the class \texttt{NumberCheck}  and method \texttt{check}. We stored the number in a string array by looping through the String, and using
+
+\begin{lstlisting}
+Character.getNumericValue(number.charAt(i)
+\end{lstlisting}
+
+i.e. we obtained the char at index i, converted it to and integer, and performed the various tests to determine what to do with the current digit.\\
+\\
+The indexes of the number start at the end, i.e. in the number 567, the digit 7 is at index 0. We initialized the index to (in common Java code) the last digit at index (n-1) and decremented the counter i.
+
+\begin{lstlisting}
+for(int i = number.length()-1; i >=0; i--){ ... }
+\end{lstlisting}
+
+The final step of the number check is to return a boolean. We computed the boolean and returned it on one step:
+\begin{lstlisting}
+return (sum % 10 == 0);
+\end{lstlisting}

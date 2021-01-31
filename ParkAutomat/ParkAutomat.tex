@@ -1,0 +1,7 @@
+\section*{1.3 ParkAutomat}
+
+The program \texttt{ParkAutomat} is quite different from the previous programs. The program simulates a parking automate. When doing so, the program prompts the user for some input through \texttt{stdin} using the \texttt{Scanner} class. \\
+\\
+The program follows the template from the assignment when choosing random timestamps. The timestamps are converted into a number, and the time difference (parking time) is calculated each time the user submits a number (after checking if it is a legal coin). The program also acts as expected when $B$, $C$ or $T$ is submitted. If the time difference is more than 2 hours, the parking time is set to start time plus 2 hours. Once maximum parking time is reached, the program no longer accepts coins, but still allows the user to \textbf{buy} or \textbf{cancel} the ticket, or \textbf{terminate} the program.\\
+\\
+The structure of the program is based on two while loops. The outer loop (called \texttt{mainLoop}) maintains the interface for the next "user" needing to buy a ticket. The inner loop (called \texttt{userLoop}) interacts with the individual users, until they choose one of the possible outcomes of the program. As long as they user does not choose to terminate the program, the command \texttt{continue mainLoop} is called, to run a new iteration of the  \texttt{mainLoop}. This resets the parameters and gets a new random time using the methods from the template.

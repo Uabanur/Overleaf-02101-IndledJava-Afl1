@@ -1,0 +1,9 @@
+\section*{1.2b RandomWalk2}
+
+\texttt{RandomWalk2} is a program much like \texttt{RandomWalk}, using the method \texttt{runSimulation2}. In \texttt{RandomWalk2}, the movements of two particles are simulated. The Java file is extensively commented. \\
+\\
+The first particle moves as in \texttt{RandomWalk}, but the second does not move randomly. Particle 2 tracks down particle 1. Both particles are initially placed at random on the gird, but particle 2 seeks to minimize the distance between the two particles until they crash. When a crash occurs, the program terminates. If the two particles do not crash within $t$ moves, the program terminates. \\
+\\
+Variables set when calling the method \texttt{runSimulation2} are the same as in \texttt{RandomWalk}.\\
+\\
+The direction in which particle 2 is going to move is chosen based on the difference in the two particles' coordinates. The two coordinates which are furthest apart determine the moving direction. If the distance from particle 2 to particle 1 in the found direction is $s$ or greater, particle 2 moves a length $s$. If particle 1 is within reach of length $s$, particle 2 moves the corresponding gap, crashes into particle 1, and the program terminates.
